@@ -25,7 +25,9 @@ class HomeActivity : AppCompatActivity() {
     private fun subscribe() {
         weatherViewModel.getWeatherInfo().observe(this,
             Observer<WeatherInfo> { weatherInfo ->
-                weatherInfo?.let { temperature.text = it.temperature }
+                weatherInfo?.let {
+                    temperature.text = it.temperatureInfo.temp.toString()
+                }
             })
     }
 }
