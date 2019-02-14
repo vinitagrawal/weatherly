@@ -13,6 +13,9 @@ android {
         versionCode 1
         versionName "0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        def APP_ID = "$System.env.Open_Weather_App_Id" ? "$System.env.Open_Weather_App_Id" : "AppId"
+        buildConfigField 'String', 'APP_KEY', "$APP_ID"
     }
     buildTypes {
         release {

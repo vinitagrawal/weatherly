@@ -1,5 +1,6 @@
 package me.vinitagrawal.weatherly.api
 
+import me.vinitagrawal.weatherly.BuildConfig
 import me.vinitagrawal.weatherly.model.WeatherInfo
 import retrofit2.Call
 import retrofit2.http.GET
@@ -9,7 +10,7 @@ interface WeatherService {
 
     @GET(WEATHER_INFO)
     fun getWeatherForCity(@Query(QUERY_KEY_CITY) city: String,
-                          @Query(QUERY_KEY_APP_ID) appId: String = ""): Call<WeatherInfo>
+                          @Query(QUERY_KEY_APP_ID) appId: String = BuildConfig.APP_KEY): Call<WeatherInfo>
 
     companion object {
         const val WEATHER_INFO = "2.5/weather"
