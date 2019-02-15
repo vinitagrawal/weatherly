@@ -14,6 +14,7 @@ buildscript {
         lifecycleVersion = '2.0.0'
         retrofitVersion = '2.5.0'
         okHttpVersion = '3.13.1'
+        daggerVersion = '2.21'
 
         coreVersion = '2.0.0'
         junitVersion = '4.12'

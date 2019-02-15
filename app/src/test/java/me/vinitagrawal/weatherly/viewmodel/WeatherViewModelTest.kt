@@ -34,8 +34,7 @@ class WeatherViewModelTest {
 
     @Before
     fun setUp() {
-        weatherViewModel = WeatherViewModel()
-        weatherViewModel.setWeatherRepository(repo)
+        weatherViewModel = WeatherViewModel(repo)
     }
 
     @After

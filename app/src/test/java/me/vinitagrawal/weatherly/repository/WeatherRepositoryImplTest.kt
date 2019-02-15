@@ -23,9 +23,7 @@ class WeatherRepositoryImplTest {
 
     @Before
     fun setUp() {
-        val weatherRepositoryImpl = WeatherRepositoryImpl()
-        weatherRepositoryImpl.setWeatherService(weatherService)
-        weatherRepository = weatherRepositoryImpl
+        weatherRepository = WeatherRepositoryImpl(weatherService)
     }
 
     @Test
