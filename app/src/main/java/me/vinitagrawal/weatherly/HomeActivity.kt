@@ -18,7 +18,7 @@ class HomeActivity : BaseActivity<WeatherViewModel>(WeatherViewModel::class.java
     }
 
     private fun observeWeather() {
-        viewModel.getWeatherInfo().observe(this,
+        viewModel.weatherInfo.observe(this,
             Observer<WeatherInfo> { weatherInfo ->
                 weatherInfo?.let {
                     temperature.text = it.temperatureInfo.temp.toString()

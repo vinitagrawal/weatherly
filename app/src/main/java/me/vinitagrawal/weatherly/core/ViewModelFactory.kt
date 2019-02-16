@@ -1,4 +1,4 @@
-package me.vinitagrawal.weatherly.viewmodel
+package me.vinitagrawal.weatherly.core
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

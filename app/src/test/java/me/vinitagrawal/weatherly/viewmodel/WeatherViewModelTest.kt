@@ -30,11 +30,11 @@ class WeatherViewModelTest {
     @Mock
     private lateinit var call: Call<WeatherInfo>
 
-    private lateinit var weatherViewModel: WeatherViewModel
+    private lateinit var viewModel: WeatherViewModel
 
     @Before
     fun setUp() {
-        weatherViewModel = WeatherViewModel(repo)
+        viewModel = WeatherViewModel(repo)
     }
 
     @After
@@ -53,7 +53,9 @@ class WeatherViewModelTest {
                 callback.onResponse(call, Response.success(weatherInfo))
             }
 
-        assertEquals("London", weatherViewModel.getWeatherInfo().value?.cityName)
+        viewModel.onRender()
+
+        assertEquals("London", viewModel.weatherInfo.value?.cityName)
         verify(repo).getWeatherForCity()
         verify(call).enqueue(any())
     }

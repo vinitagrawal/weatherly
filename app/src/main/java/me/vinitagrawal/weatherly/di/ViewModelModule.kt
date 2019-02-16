@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.MapKey
 import dagger.Module
 import dagger.Provides
-import me.vinitagrawal.weatherly.viewmodel.ViewModelFactory
+import me.vinitagrawal.weatherly.core.ViewModelFactory
 import javax.inject.Provider
 import javax.inject.Singleton
 import kotlin.reflect.KClass
