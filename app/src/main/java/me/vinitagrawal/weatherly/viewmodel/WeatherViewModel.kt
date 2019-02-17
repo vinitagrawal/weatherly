@@ -1,5 +1,6 @@
 package me.vinitagrawal.weatherly.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import me.vinitagrawal.weatherly.core.BaseViewModel
 import me.vinitagrawal.weatherly.model.WeatherInfo
@@ -19,7 +20,7 @@ class WeatherViewModel(private val weatherRepository: WeatherRepository) : BaseV
     private fun fetchWeather() {
         weatherRepository.getWeatherForCity().enqueue(object : Callback<WeatherInfo> {
             override fun onFailure(call: Call<WeatherInfo>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                Log.d(javaClass.simpleName, t.message)
             }
 
             override fun onResponse(call: Call<WeatherInfo>, response: Response<WeatherInfo>) {
